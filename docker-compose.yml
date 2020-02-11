@@ -10,4 +10,8 @@ services:
       MYSQL_ROOT_PASSWORD: rootPassword
     ports:
       - '3306:3306'
+    volumes:
+      - my-datavolume:/var/lib/mysql
     command: --character-set-server=utf8mb4 --default-authentication-plugin=mysql_native_password
+volumes:
+  my-datavolume:

@@ -11,7 +11,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: info,health
+        include: info,health,prometheus
         exclude:
 
 spring:
@@ -19,7 +19,7 @@ spring:
     url: jdbc:mysql://localhost:3306/goldenpath
     username: goldenpathUser
     password: goldenpathUserPassword
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     initialization-mode: always
   jpa:
     hibernate:

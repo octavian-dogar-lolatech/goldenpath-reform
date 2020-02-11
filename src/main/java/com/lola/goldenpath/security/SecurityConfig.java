@@ -17,8 +17,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import static com.lola.goldenpath.constants.Constants.ADMIN;
-
 /**
  * Configures the authorization server.
  * The @EnableAuthorizationServer annotation is used to configure the OAuth 2.0 Authorization Server mechanism,
@@ -90,7 +88,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/users/signUp").permitAll()
                 .antMatchers(HttpMethod.POST, "/users/signIn").permitAll()
 
-                .antMatchers("/actuator/*", "/actuator").hasRole(ADMIN)
+                .antMatchers("/actuator/*", "/actuator").permitAll()
 
                 .anyRequest()
                 .authenticated();
