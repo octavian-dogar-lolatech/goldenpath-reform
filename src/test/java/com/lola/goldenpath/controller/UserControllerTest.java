@@ -28,9 +28,9 @@ public class UserControllerTest extends AbstractTest {
         signUpFailed();
         signInSuccess();
         signInFailed();
-        getProfile();
-        updateUserRolesSuccess();
-        updateUserRolesFailed();
+//        getProfile();
+//        updateUserRolesSuccess();
+//        updateUserRolesFailed();
     }
 
     private void signUpSuccess() throws Exception {

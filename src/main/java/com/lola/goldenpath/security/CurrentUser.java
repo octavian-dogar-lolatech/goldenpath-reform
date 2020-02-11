@@ -7,7 +7,7 @@ import java.lang.annotation.*;
 @Target({ElementType.PARAMETER, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@AuthenticationPrincipal
+@AuthenticationPrincipal /*shukara treaba asta bos*/
 public @interface CurrentUser {
 
 }

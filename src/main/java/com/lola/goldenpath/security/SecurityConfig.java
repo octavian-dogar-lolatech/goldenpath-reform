@@ -72,8 +72,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .cors()
                 .and()
-                .csrf()
-                .disable()
+                .csrf().disable()
                 .exceptionHandling()
                 .authenticationEntryPoint(unauthorizedHandler)
                 .and()
@@ -82,21 +81,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
 
+                .antMatchers("/swagger-ui.html").permitAll()
+                .antMatchers("/v2/api-docs**").permitAll()
+                .antMatchers("/swagger.json").permitAll()
+                .antMatchers("/swagger-resources/**").permitAll()
+                .antMatchers("/webjars/springfox-swagger-ui/**").permitAll()
 
-//                .antMatchers("/swagger-ui.html").permitAll()
-//                .antMatchers("/v2/api-docs**").permitAll()
-//                .antMatchers("/swagger.json").permitAll()
-//                .antMatchers("/swagger-resources/**").permitAll()
-
+                .antMatchers(HttpMethod.POST, "/users/signUp").permitAll()
+                .antMatchers(HttpMethod.POST, "/users/signIn").permitAll()
 
                 .antMatchers("/actuator/*", "/actuator").hasRole(ADMIN)
-                .antMatchers("/v1/api/auth/**").permitAll()
-                .antMatchers(HttpMethod.GET, "/v1/api/users/**", "/v1/api/roles/**").permitAll()
+
                 .anyRequest()
                 .authenticated();
 
 //         Add our custom JWT security filter
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
-
     }
+
+
 }
