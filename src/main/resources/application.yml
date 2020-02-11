@@ -1,0 +1,22 @@
+## Jwt properties
+server:
+  port: 8080
+  servlet:
+    context-path: /goldenpath/api/v1
+app:
+  jwtSecret: lola.tech.java.team
+  jwtExpirationInMs: 604800000
+## Spring boot actuator properties
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
+        exclude:
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security:
+#          web:
+#            FilterChainProxy: DEBUG
