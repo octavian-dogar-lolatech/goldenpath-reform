@@ -13,7 +13,7 @@ GoldenPath wants to be an universal startup project for any kind of Java Rest AP
 
 5.```mvn spring-boot:run```
 
-6.```docker run --name=prometheus -p 9090:9090 -v /Users/octavian.dogar/Documents/LOLA/repo/GoldenPath-master/etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus --config.file=/etc/prometheus/prometheus.yml```
+6.```docker run --name=prometheus -p 9090:9090 -v /[project_location]/GoldenPath-master/etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus --config.file=/etc/prometheus/prometheus.yml```
 
 7.```docker run -d --name=grafana -p 3000:3000 grafana/grafana```
 
