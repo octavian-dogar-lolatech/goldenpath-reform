@@ -1,6 +1,6 @@
 package com.lola.goldenpath.service;
 
-import com.lola.goldenpath.model.entity.UserEntity;
+import com.lola.goldenpath.model.UserEntity;
 import com.lola.goldenpath.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -4,7 +4,7 @@ import com.lola.goldenpath.dto.LoginModelDto;
 import com.lola.goldenpath.dto.LoginResponseDto;
 import com.lola.goldenpath.dto.RoleDto;
 import com.lola.goldenpath.dto.SignUpModelDto;
-import com.lola.goldenpath.model.entity.UserEntity;
+import com.lola.goldenpath.model.UserEntity;
 import com.lola.goldenpath.security.CurrentUser;
 import com.lola.goldenpath.service.UserService;
 import lombok.RequiredArgsConstructor;

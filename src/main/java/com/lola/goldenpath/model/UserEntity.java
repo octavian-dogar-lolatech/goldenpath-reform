@@ -1,4 +1,4 @@
-package com.lola.goldenpath.model.entity;
+package com.lola.goldenpath.model;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -35,7 +35,7 @@ public class UserEntity implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        var authorities = new ArrayList<GrantedAuthority>();
+        final var authorities = new ArrayList<GrantedAuthority>();
 
         roles.stream()
                 .map(RoleEntity::getName)

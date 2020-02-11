@@ -1,6 +1,6 @@
 package com.lola.goldenpath.dto;
 
-import com.lola.goldenpath.model.entity.RoleEntity;
+import com.lola.goldenpath.model.RoleEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

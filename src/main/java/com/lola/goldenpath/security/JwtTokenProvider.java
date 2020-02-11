@@ -1,6 +1,6 @@
 package com.lola.goldenpath.security;
 
-import com.lola.goldenpath.model.entity.UserEntity;
+import com.lola.goldenpath.model.UserEntity;
 import io.jsonwebtoken.*;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;

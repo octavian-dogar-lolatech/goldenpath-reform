@@ -1,4 +1,4 @@
-package com.lola.goldenpath.model.entity;
+package com.lola.goldenpath.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

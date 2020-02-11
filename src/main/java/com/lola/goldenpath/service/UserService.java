@@ -1,9 +1,9 @@
 package com.lola.goldenpath.service;
 
 import com.lola.goldenpath.dto.*;
-import com.lola.goldenpath.model.entity.RoleEntity;
-import com.lola.goldenpath.model.entity.UserEntity;
-import com.lola.goldenpath.model.exception.RoleNotFoundException;
+import com.lola.goldenpath.exception.RoleNotFoundException;
+import com.lola.goldenpath.model.RoleEntity;
+import com.lola.goldenpath.model.UserEntity;
 import com.lola.goldenpath.repository.RoleRepository;
 import com.lola.goldenpath.repository.UserRepository;
 import com.lola.goldenpath.security.JwtTokenProvider;
